@@ -1,5 +1,7 @@
 /* Aero Glass Desktop CSS - Premium glassmorphism design */
-
+html {
+    scroll-behavior: smooth;
+}
 * {
     margin: 0;
     padding: 0;
@@ -221,6 +223,7 @@ h1 {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    text-align: center;
 }
 
 .glass-btn::before {
