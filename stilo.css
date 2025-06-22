@@ -464,3 +464,9 @@ h1 {
     justify-content: center;
     gap: 10px;
 }
+
+.align-center {
+    margin-top: 8%;
+    width: 100%;
+    text-align: center;
+}
