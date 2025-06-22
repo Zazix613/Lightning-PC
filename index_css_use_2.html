@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome - Aero Glass Desktop</title>
+    
+        <link rel="stylesheet" href="stilo.css">
+  
+</head>
+<body>
+    <div class="desktop-container">
+        <header class="header">
+            <div class="logo">Windows 7</div>
+            <nav class="header-nav">
+                <a href="index_css_use_2.html">Home</a>
+                <a href="rolunk.html">About</a>
+                <a href="#work">Work</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <section class="hero-section">
+                <div class="glass-card">
+                    <h1>Üdvözöllek</h1>
+                    <p class="subtitle">Ez Fehér Zalán és Magyar Vilmos Tompaháti Villám Mcqueen stílusú PC boltja</p>
+                    
+                    <div class="nav-buttons">
+                        <a href="#about" class="glass-btn"><span>About</span></a>
+                        <a href="#services" class="glass-btn"><span>Services</span></a>
+                        <a href="#portfolio" class="glass-btn"><span>Portfolio</span></a>
+                        <a href="#contact" class="glass-btn"><span>Contact</span></a>
+                    </div>
+                    
+                    <div class="features">
+                        <div class="feature-card">
+                            <div class="feature-icon">🎨</div>
+                            <div class="feature-title">Premium Design</div>
+                            <div class="feature-desc">Desktop-optimized glassmorphism with enhanced visual hierarchy</div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">⚡</div>
+                            <div class="feature-title">High Performance</div>
+                            <div class="feature-desc">Hardware-accelerated animations for smooth desktop experience</div>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <div class="feature-icon">🖥️</div>
+                            <div class="feature-title">Desktop First</div>
+                            <div class="feature-desc">Designed specifically for large screens and desktop interactions</div>
+                        </div>
+                    </div>
+
+                    <div class="scroll-indicator" onclick="scrollToSection('about')">
+                        <span>Scroll to explore</span>
+                        <div class="scroll-arrow"></div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="about" class="content-section about-section">
+                <h2 class="section-title">About Our Design</h2>
+                <p style="color: rgba(255, 255, 255, 0.9); font-size: 1.2rem; line-height: 1.8; text-align: center; margin-bottom: 40px;">
+                    Our aero glass interface represents the perfect fusion of modern web technologies and classic design principles. 
+                    Built with performance in mind, every element is crafted to provide a seamless desktop experience that feels both 
+                    familiar and cutting-edge.
+                </p>
+                <div style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 40px; margin-top: 50px;">
+                    <div style="text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 20px;">🌟</div>
+                        <h3 style="color: white; font-size: 1.4rem; margin-bottom: 15px;">Innovation</h3>
+                        <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Pushing the boundaries of what's possible with modern CSS and thoughtful interaction design.</p>
+                    </div>
+                    <div style="text-align: center;">
+                        <div style="font-size: 4rem; margin-bottom: 20px;">🎯</div>
+                        <h3 style="color: white; font-size: 1.4rem; margin-bottom: 15px;">Precision</h3>
+                        <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.6;">Every pixel, every transition, and every interaction is carefully considered and optimized.</p>
+                    </div>
+                   
+                    <a href="rolunk.html" class="glass-btn2"><span>Bővebben</span></a>
+                    
+                </div>
+            </section>
+
+            <section id="services" class="content-section services-section">
+                <h2 class="section-title">Our Services</h2>
+                <div class="services-grid">
+                    <div class="service-item">
+                        <div class="service-icon">💻</div>
+                        <div class="service-title">Web Development</div>
+                        <div class="service-desc">Custom websites built with modern technologies and optimized for performance</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🎨</div>
+                        <div class="service-title">UI/UX Design</div>
+                        <div class="service-desc">Beautiful, intuitive interfaces that enhance user experience and engagement</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">📱</div>
+                        <div class="service-title">Mobile Apps</div>
+                        <div class="service-desc">Native and cross-platform applications with stunning visual design</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-icon">🚀</div>
+                        <div class="service-title">Performance</div>
+                        <div class="service-desc">Speed optimization and performance tuning for lightning-fast experiences</div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <p>&copy; 2025 Aero Glass Desktop Experience. Engineered for excellence.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Smooth scrolling functionality
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        }
+
+        // Header scroll effect
+        let lastScrollTop = 0;
+        const header = document.querySelector('.header');
+
+        window.addEventListener('scroll', () => {
+            const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            
+            if (scrollTop > 100) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+            
+            lastScrollTop = scrollTop;
+        });
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all content sections
+        document.querySelectorAll('.content-section').forEach(section => {
+            observer.observe(section);
+        });
+
+        // Smooth navigation link scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetSection = document.querySelector(targetId);
+                if (targetSection) {
+                    targetSection.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Hide scroll indicator when scrolling starts
+        let scrollTimer = null;
+        const scrollIndicator = document.querySelector('.scroll-indicator');
+
+        window.addEventListener('scroll', () => {
+            if (window.pageYOffset > 50) {
+                scrollIndicator.style.opacity = '0';
+                scrollIndicator.style.pointerEvents = 'none';
+            } else {
+                scrollIndicator.style.opacity = '1';
+                scrollIndicator.style.pointerEvents = 'auto';
+            }
+        });
+
+        // Parallax effect for background
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const parallax = document.body;
+            const speed = scrolled * 0.5;
+            parallax.style.backgroundPosition = `center ${speed}px`;
+        });
+    </script>
+</body>
+</html>
