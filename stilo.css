@@ -224,6 +224,11 @@ h1 {
     overflow: hidden;
     cursor: pointer;
     text-align: center;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
 }
 
 .glass-btn::before {
@@ -450,7 +455,7 @@ h1 {
     border: 1px solid rgba(255, 255, 255, 0.15);
     border-radius: 16px;
     padding: 20px 25px;
-    color: rgb(255, 255, 255);
+    color: white;
     text-decoration: none;
     font-weight: 500;
     font-size: 1.1rem;
@@ -458,11 +463,9 @@ h1 {
     position: relative;
     overflow: hidden;
     cursor: pointer;
+    text-align: center;
    
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+    
 }
 
 .align-center {
